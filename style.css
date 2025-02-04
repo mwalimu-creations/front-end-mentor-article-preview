@@ -34,6 +34,7 @@ main {
     background-color: #fff;
     border-radius: 12px;
     max-width: 20rem;
+    position: relative;
 }
 
 .image-section>img {
@@ -58,6 +59,7 @@ main {
     line-height: 1.8;
     font-weight: 500;
     margin-top: 1rem;
+    opacity: 80%;
 }
 
 .profile-and-share-btn,
@@ -83,6 +85,31 @@ main {
     border-radius: 50%;
     background-color: var(--bg-color);
     padding: 8px;
+    z-index: 1;
+}
+
+.share-button:hover {
+    cursor: pointer;
+}
+
+.share-menu {
+    background-color: var(--text-color);
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 1.8rem 1.5rem;
+    color: var(--bg-color);
+    gap: 1rem;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    width: 20rem;
+    position: absolute;
+    bottom: -1000px;
+}
+
+.share-menu>p {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 80%;
 }
 
 .attribution {
@@ -109,5 +136,13 @@ main {
         border-top-left-radius: 12px;
         border-top-right-radius: 0;
         border-bottom-left-radius: 12px;
+    }
+
+    .share-menu {
+        border-radius: 12px;
+        right:-80px;   
+        padding: 1rem;
+        justify-content: center; 
+        width: 15rem;   
     }
 }
