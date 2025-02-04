@@ -1,5 +1,5 @@
 const shareButton = document.getElementById('share-button');
-const shareMenu = document.querySelector('.share-menu');
+const shareMenu = document.querySelector('.share-menu-desktop');
 const largeScreen = window.matchMedia('(min-width:1024px)');
 
 function adjustMenu(e) {

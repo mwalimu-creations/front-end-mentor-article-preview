@@ -92,7 +92,15 @@ main {
     cursor: pointer;
 }
 
-.share-menu {
+.share-menu-desktop {
+    position: absolute;
+    bottom: -1000px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.share-menu{
     background-color: var(--text-color);
     display: flex;
     flex-flow: row nowrap;
@@ -102,14 +110,22 @@ main {
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     width: 20rem;
-    position: absolute;
-    bottom: -1000px;
+   
 }
 
 .share-menu>p {
     text-transform: uppercase;
     letter-spacing: 3px;
     opacity: 80%;
+}
+
+.down-arrow {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid var(--text-color);
+    display: none;
 }
 
 .attribution {
@@ -132,17 +148,25 @@ main {
         width: 52rem;
     }
 
-    .image-section>img{
+    .image-section>img {
         border-top-left-radius: 12px;
         border-top-right-radius: 0;
         border-bottom-left-radius: 12px;
     }
 
+    .share-menu-desktop{
+        right: -80px;
+        justify-content: center;
+    }
+
     .share-menu {
         border-radius: 12px;
-        right:-80px;   
         padding: 1rem;
-        justify-content: center; 
-        width: 15rem;   
+        justify-content: center;
+        width: 15rem;
+    }
+
+    .down-arrow {
+        display: block;
     }
 }
